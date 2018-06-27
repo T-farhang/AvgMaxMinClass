@@ -22,15 +22,11 @@ public class AvgMaxMinClass {
         
         String[] s = {"America","Asia","Africa","Europe","Australia"};
 
-        Student student1 = new Student();
-        student1.setfname("Tahereh");
-        student1.setLname("Farhang");
+        Student student1 = new Student("Tahereh","Farhang",01);
         Double[] score1 = {new Double(20.0), new Double(15.5), new Double(16.0)};
         student1.setScore(score1);
 
-        Student student2 = new Student();
-        student2.setfname("Sahar");
-        student2.setLname("Sadeghi");
+        Student student2 = new Student("Sahar","Sadeghi",02);
         Double[] score2 = {new Double(15.0), new Double(12), new Double(16.0)};
         student2.setScore(score2);
 
@@ -59,6 +55,7 @@ public class AvgMaxMinClass {
         GenericMethods.Min(student1.getScore(), student2.getScore());
         
         GenericMethods.Max(student1.getfName(), student2.getfName());
+        GenericMethods.Max(student1.getId(), student2.getId());
         GenericMethods.Min(student1.getLname(), student2.getLname());
         
     }

@@ -38,7 +38,7 @@ public class GenericMethods<E> {
         } else {
             max = item2;
         }
-        System.out.println("minimum is " + max);
+        System.out.println("Maximum is " + max);
     }
 
     public static <E extends Comparable<E>> void Max(E[] list1, E[] list2) {
@@ -78,7 +78,7 @@ public class GenericMethods<E> {
         } else {
             min = item2;
         }
-        System.out.println("maximum is " + min);
+        System.out.println("Minimum is " + min);
     }
 
     public static <E extends Comparable<E>> void Min(E[] list1, E[] list2) {
