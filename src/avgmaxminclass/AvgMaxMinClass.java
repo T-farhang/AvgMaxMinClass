@@ -19,35 +19,43 @@ public class AvgMaxMinClass {
 
         Double[] b = {new Double(-12.2), new Double(1.4), new Double(3.5), new Double(0.1),
             new Double(8.7), new Double(-9.2)};
+        
+        String[] s = {"America","Asia","Africa","Europe","Australia"};
 
-        Student c1 = new Student();
-        c1.setfName("Tahereh");
-        c1.setLname("Farhang");
-        Double[] s1 = {new Double(20.0), new Double(15.5), new Double(16.0)};
-        c1.setScore(s1);
+        Student student1 = new Student();
+        student1.setfName("Tahereh");
+        student1.setLname("Farhang");
+        Double[] score1 = {new Double(20.0), new Double(15.5), new Double(16.0)};
+        student1.setScore(score1);
 
-        Student c2 = new Student();
-        c2.setfName("Sahar");
-        c2.setLname("Sadeghi");
-        Double[] s2 = {new Double(15.0), new Double(12), new Double(16.0)};
-        c2.setScore(s2);
+        Student student2 = new Student();
+        student2.setfName("Sahar");
+        student2.setLname("Sadeghi");
+        Double[] score2 = {new Double(15.0), new Double(12), new Double(16.0)};
+        student2.setScore(score2);
 
         GenericMethods.Max(a);
-        GenericMethods.Max(b);
-        System.out.println(c1);
-        GenericMethods.Max(c1.getScore());
-        System.out.println(c2);
-        GenericMethods.Max(c2.getScore());
-
         GenericMethods.Min(a);
+        GenericMethods.Avg(a);
+
+        GenericMethods.Max(b);
         GenericMethods.Min(b);
-        System.out.println(c1);
-        GenericMethods.Min(c1.getScore());
-        System.out.println(c2);
-        GenericMethods.Min(c2.getScore());
+        GenericMethods.Avg(b);
+        
+        GenericMethods.Max(s);
+        GenericMethods.Min(s);
 
-        GenericMethods.Max(c1.getScore(), c2.getScore());
-        GenericMethods.Min(c1.getScore(), c2.getScore());
+        System.out.println(student1);
+        GenericMethods.Max(student1.getScore());
+        GenericMethods.Min(student1.getScore());
+        GenericMethods.Avg(student1.getScore());
 
+        System.out.println(student2);
+        GenericMethods.Max(student2.getScore());
+        GenericMethods.Min(student2.getScore());
+        GenericMethods.Avg(student2.getScore());
+
+        GenericMethods.Max(student1.getScore(), student2.getScore());
+        GenericMethods.Min(student1.getScore(), student2.getScore());
     }
 }

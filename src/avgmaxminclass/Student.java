@@ -9,7 +9,7 @@ package avgmaxminclass;
  *
  * @author Totia
  */
-public class Student {
+public class Student<E> {
 
     private String fName;
     private String lName;

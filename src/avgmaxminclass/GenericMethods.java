@@ -5,9 +5,6 @@
  */
 package avgmaxminclass;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-
 /**
  *
  * @author Totia
@@ -79,19 +76,24 @@ public class GenericMethods<E> {
         }
         if (min1.compareTo(min2) < 0) {
             System.out.println("Minimum is " + min1 + "from ");
-            //    System.out.printf("%s", list1.toString());
         } else {
             System.out.println("Minimum is " + min2);
-            //      System.out.printf("%s", list2.toString());
         }
 
     }
 
-//    public static <E extends Comparable<E>> void Avg(E[] list) {
-//        E result = list[0];
-//        for (int i = 1; i < list.length; i++) {
-//            result += list[i];
-//        }
-//        System.out.println(result);
-//    }
+    public static <E extends Number> void Avg(E[] list) {
+        Number result = list[0];
+        for (int i = 1; i < list.length; i++) {
+            result = add(result, list[i]);
+        }
+        Number r = result.doubleValue() / list.length;
+        System.out.println("Avarage is " + r);
+    }
+
+    public static Number add(Number n1, Number n2) {
+        Double n = n1.doubleValue() + n2.doubleValue();
+        return n;
+    }
+
 }
