@@ -50,7 +50,7 @@ public class Student<E> {
         return score;
     }
 
-    public void setfName(String fName) {
+    public void setfname(String fName) {
         this.fName = fName;
     }
 

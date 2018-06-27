@@ -31,6 +31,16 @@ public class GenericMethods<E> {
         System.out.println("Max is " + max);
     }
 
+    public static <E extends Comparable<E>> void Max(E item1, E item2) {
+        E max;
+        if (item1.compareTo(item2) > 0) {
+            max = item1;
+        } else {
+            max = item2;
+        }
+        System.out.println("minimum is " + max);
+    }
+
     public static <E extends Comparable<E>> void Max(E[] list1, E[] list2) {
         E max1 = list1[0];
         for (int i = 1; i < list1.length; i++) {
@@ -59,6 +69,16 @@ public class GenericMethods<E> {
             }
         }
         System.out.println("Min is " + min);
+    }
+
+    public static <E extends Comparable<E>> void Min(E item1, E item2) {
+        E min;
+        if (item1.compareTo(item2) < 0) {
+            min = item1;
+        } else {
+            min = item2;
+        }
+        System.out.println("maximum is " + min);
     }
 
     public static <E extends Comparable<E>> void Min(E[] list1, E[] list2) {
